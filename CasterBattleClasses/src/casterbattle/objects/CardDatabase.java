@@ -78,25 +78,122 @@ public class CardDatabase {
 	}
 	
 	/*
+	 * Kernel methods-------------------------------------------------
+	 */
+	
+	/*
 	 * public getter methods
 	 */
 	
+	/**
+	 * Returns the name of the card.
+	 * 
+	 * @return the name
+	 */
 	public String getName() {
 		return this.name;
 	}
 	
-	// TODO repeat for all other private fields
-	// yes i know it looks stupid but it's necessary
+	/**
+	 * Returns the mana of the card.
+	 * 
+	 * @return the mana
+	 */
+	public int getMana() {
+		return this.mana;
+	}
 	
+	/**
+	 * Returns whether the card is a caster.
+	 * 
+	 * @return whether this is a caster
+	 */
+	public boolean isCaster() {
+		return this.isCaster;
+	}
+	
+	/**
+	 * Returns the attack of the card (0 if a spell).
+	 * 
+	 * @return the atttack of this
+	 */
+	public int getAttack() {
+		return this.attack;
+	}
+	
+	/**
+	 * Returns the health of the card (0 if a spell).
+	 * 
+	 * @return the health of this
+	 */
+	public int getHealth() {
+		return this.health;
+	}
+	
+	/**
+	 * Returns the maximum allowed copies of the card.
+	 * 
+	 * @return the max copies of this
+	 */
+	public int maxCopies() {
+		return this.maxCopies;
+	}
+
 	/*
 	 * public setter methods
 	 */
 	
+	/**
+	 * Sets the name of the card to {@code name}
+	 * 
+	 * @param name the new name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 	
-	//TODO repeat for all other private fields
-	//we technically only need for health and maybe mana at first but let's just make the setters
-	//now so that they exist
+	/**
+	 * Sets the mana of the card to {@code mana}
+	 * 
+	 * @param mana the new mana cost
+	 */
+	public void setMana(int mana) {
+		this.mana = mana;
+	}
+	
+	/**
+	 * Sets the caster state of the card to {@code caster}
+	 * 
+	 * @param caster the new caster state
+	 */
+	public void setIsCaster(boolean caster) {
+		this.isCaster = caster;
+	}
+	
+	/**
+	 * Sets the attack of the card to {@code attack}
+	 * 
+	 * @param the new attack
+	 */
+	public void setAttack(int attack) {
+		this.attack = attack;
+	}
+	
+	/**
+	 * Sets the health of the card to {@code health}
+	 * 
+	 * @param the new health
+	 */
+	public void setHealth(int health) {
+		this.health = health;
+	}
+	
+	/**
+	 * Sets the maximum copies of the card to {@code copies}
+	 * 
+	 * @param the new max copies
+	 */
+	public void setMaxCopies(int max) {
+		this.maxCopies = max;
+	}
 }

@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 /**
- *A deck represented by an arrayList of cards. The card at 0 is the top 
- * of the deck while the element at this.size - 1 is the bottom card.
+ *A deck represented by an arrayList of cards. The card at this.size - 1 is the top 
+ * of the deck while the element at 0 is the bottom card.
  *
  * @author Dr. Mundo
  *
@@ -20,13 +20,7 @@ public final class Deck {
     /**
      * Representation of {@code this}.
      */
-	
-	// TODO After card is ready most Strings will turn to cards
-	//(that is assuming card works as intended in a List)
-	
-	// TODO youre a moron and will have overwrite contains
-	
-    private List<String> rep;
+    private List<Card> rep;
 
     /**
      * Creator of initial representation.
@@ -51,10 +45,18 @@ public final class Deck {
      */
     
     /**
-     * Adds {@code cardName} to the top of the deck.
+     * Adds Card {@code cardName} to the top of the deck.
+     */
+    public void addCard(Card cardName) {
+    	this.rep.add(this.rep.size(), cardName);
+    }
+    
+    /**
+     * Adds Card from {@code cardName} to the top of the deck.
      */
     public void addCard(String cardName) {
-    	this.rep.add(0, cardName);
+    	Card add = new Card(cardName);
+    	this.rep.add(this.rep.size(), add);
     }
     
     /**
@@ -66,7 +68,8 @@ public final class Deck {
     public void addCard(int copies, String cardName) {
     	int i = 0;
     	while (i < copies) {
-    		this.rep.add(0, cardName);
+    		Card add = new Card(cardName);
+    		this.rep.add(this.rep.size(), add);
     		i++;
     	}
     }
@@ -76,8 +79,8 @@ public final class Deck {
      * @requires this.size > 0
      * @return the card removed.
      */
-    public String removeTop() {
-    	String top = this.rep.remove(0);
+    public Card removeTop() {
+    	Card top = this.rep.remove(this.size() - 1);
     	return top;
     }
     
@@ -86,42 +89,129 @@ public final class Deck {
      * @requires cardName is in the deck
      * @return the card removed
      */
-    public String removeCard(String cardName) {
-    	int i = 0;
-    	boolean cardIsRemoved = false;
-    	String removeCard = "";
-    	while (i < this.rep.size()) {
-    		String card = this.rep.remove(0);
-    		if (!cardIsRemoved) {
-    			if (card.equals(cardName)) {
-    				cardIsRemoved = true;
-    				removeCard = card;
-    			} else {
-    				this.rep.add(this.rep.size(), card);
-    			}
-    		}else {
-    			this.rep.add(this.rep.size(), card);
+    public Card removeCard(String cardName) {
+    	
+    	Card remove = new Card(cardName);
+    	boolean removed = false;
+    	int index = this.rep.size() - 1;
+    	while (!removed) {
+    		if (this.rep.get(index).equals(remove)) {
+    			removed = true;
+    		} else {
+    			index--;
     		}
     	}
     	
-    	return removeCard;
+    	
+    	return remove;
+    }
+    
+    /**
+     * Removes the card at the given deck position.
+     * @param index the position of the card in this.rep
+     * @requires 0 <= index < this.size
+     * @return the card removed
+     */
+    public Card removeAtIndex(int index) {
+    	Card remove = this.rep.get(index);
+    	this.rep.remove(index);
+    	
+    	return remove;
+    }
+    
+    /**
+     * Returns the index of next copy of {@code cardName} in the deck.
+     * @param cardName the name of the card to be found
+     * @return the first index of {@code cardName} or -1 if this does not contain {@code cardName}
+     */
+    public int indexOf(String cardName) {
+    	int index = -1;
+    	boolean foundIndex = false;
+    	int i = this.rep.size() - 1;
+    	while (!foundIndex && i >= 0) {
+    		String card = this.rep.get(i).getName();
+    		if (card.equals(cardName)) {
+    			foundIndex = true;
+    			index = i;
+    		}
+    		i--;
+    	}
+    	
+    	return index;
+    }
+    
+    /**
+     * Returns true when this has at least 1 copy of {@code cardName}.
+     * 
+     * @param cardName the card to check for
+     * @return {@code cardName} is in this
+     */
+    public boolean contains(Card cardName) {
+    	boolean contains = false;
+    	int i = 0;
+    	while (!contains && i < this.rep.size()) {
+    		if (cardName.equals(this.rep.get(i))) {
+    			contains = true;
+    		}
+    		i++;
+    	}
+    	
+    	return contains;
+    }
+    
+    /**
+     * Returns the index of the closest caster to the top of this.
+     * @return the index of the top caster or -1 if there are no casters
+     */
+    public int indexOfNextCaster() {
+    	int index = -1;
+    	boolean foundIndex = false;
+    	int i = this.rep.size() - 1;
+    	while (!foundIndex && i >= 0) {
+    		boolean checkCaster = this.rep.get(i).isCaster();
+    		if (checkCaster) {
+    			foundIndex = true;
+    			index = i;
+    		}
+    	}
+    	
+    	return index;
+    }
+    
+    /**
+     * Returns the index of the closest 3 mana card to the top of this.
+     * @return the index of the top 3 mana card or -1 if there are no such cards
+     */
+    public int indexOfNext3Mana() {
+    	int index = -1;
+    	boolean foundIndex = false;
+    	int i = this.rep.size() - 1;
+    	while (!foundIndex && i >= 0) {
+    		int checkMana = this.rep.get(i).getMana();
+    		if (checkMana == 3) {
+    			foundIndex = true;
+    			index = i;
+    		}
+    	}
+    	
+    	return index;
     }
     
     /**
      * Counts the amount of times a card is in {@code this}.
+     * 
      * @param cardName the card to check for
      * @return the amount of copies of {@code cardName}
      */
     public int cardCount(String cardName) {
     	int count = 0;
-    	List<String> temp = new ArrayList<>();
-    	while (this.rep.contains(cardName)) {
-    		int index = this.rep.indexOf(cardName);
-    		String copy = this.rep.remove(index);
-    		temp.add(copy);
-    		count++;
+    	Card check = new Card(cardName);
+    	for (Card c : this.rep) {
+    		if (c.equals(check)) {
+    			count++;
+    		}
     	}
-    	
+
     	return count;
     }
     
@@ -132,24 +222,16 @@ public final class Deck {
     public int size() {
     	return this.rep.size();
     }
-     
-    
-    // fingers crossed everything works and we don't need to override toString :)
-//    @Override
-//    public String toString() {
-//    }
     
     /*
      * Secondary methods ----------------------------------------------------
      */
     
-
-    
     /**
      * Shuffles the order of all cards in @{code this}.
      */
     public void shuffle() {
-    	List<String> temp = new ArrayList<>();
+    	List<Card> temp = new ArrayList<>();
     	
     	//empty this.rep into temp
     	while (this.size() > 0) {
@@ -164,13 +246,8 @@ public final class Deck {
     	}
     }
     
-    // TODO if card is used instead of String, method to check for obeying copy limit
-    
-    // TODO B4B type draw effects
-    
     public static void main(String[] args) {
     	//main is just for testing purposes
-        Deck player = new Deck();
-        System.out.println(player.toString());
+
     }
 }
