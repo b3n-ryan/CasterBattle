@@ -280,14 +280,6 @@ public class CardDatabase {
 				this.health = 0;
 				this.maxCopies = 2;          
 				break;
-	        case "flow":
-				this.name = "Flow";
-				this.mana = 5;
-				this.isCaster = false;
-				this.attack = 0;
-				this.health = 0;
-				this.maxCopies = 2;    
-				break;
 	        case "resurrect":
 				this.name = "Recurrect";
 				this.mana = 5;
@@ -335,14 +327,6 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;           
-				break;
-	        case "reduce":
-				this.name = "Reduce";
-				this.mana = 5;
-				this.isCaster = false;
-				this.attack = 0;
-				this.health = 0;
-				this.maxCopies = 2;   
 				break;
 	        case "sky guard":
 				this.name = "Sky Guard";
