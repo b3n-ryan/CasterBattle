@@ -71,6 +71,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;
+				break;
 			case "off-hand counter":
 				this.name = "Off-Hand Counter";
 				this.mana = 0;
@@ -78,6 +79,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;
+				break;
 	        case "blossom":
 				this.name = "Blossom";
 				this.mana = 1;
@@ -85,6 +87,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;
+				break;
 	        case "flow":
 				this.name = "Flow";
 				this.mana = 1;
@@ -92,6 +95,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;
+				break;
 	        case "enhance":
 				this.name = "Enhance";
 				this.mana = 1;
@@ -99,13 +103,15 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;
+				break;
 	        case "demon bolt":
 				this.name = "Demon Bolt";
 				this.mana = 1;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;    
+				this.maxCopies = 2; 
+				break;
 	        case "blood for blood":
 				this.name = "Blood For Blood";
 				this.mana = 1;
@@ -113,6 +119,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;    
+				break;
 	        case "goblin bomb":
 				this.name = "Goblin Bomb";
 				this.mana = 1;
@@ -120,6 +127,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 5;  
+				break;
 	        case "joust":
 				this.name = "Joust";
 				this.mana = 1;
@@ -127,13 +135,15 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2; 
+				break;
 	        case "train":
 				this.name = "Train";
 				this.mana = 1;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;    
+				this.maxCopies = 2;   
+				break;
 	        case "vampiric bite":
 				this.name = "Vampiric Bite";
 				this.mana = 2;
@@ -141,41 +151,47 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;
+				break;
 	        case "attack":
 				this.name = "Attack";
 				this.mana = 2;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;            
+				this.maxCopies = 2;    
+				break;
 	        case "protection":
 				this.name = "Protection";
 				this.mana = 2;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;            
+				this.maxCopies = 2;    
+				break;
 	        case "quiet":
 				this.name = "Quiet";
 				this.mana = 2;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;                                  
+				this.maxCopies = 2;    
+				break;
 	        case "pyromancy tome":
 				this.name = "Pyromancy Tome";
 				this.mana = 2;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;            
+				this.maxCopies = 2;     
+				break;
 	        case "sinister contract":
 				this.name = "Sinister Contract";
 				this.mana = 2;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;            
+				this.maxCopies = 2;       
+				break;
 	        case "obliterate":
 				this.name = "Obliterate";
 				this.mana = 3;
@@ -183,6 +199,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;        
+				break;
 	        case "last ditch effort":
 				this.name = "Last Ditch Effort";
 				this.mana = 3;
@@ -190,6 +207,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;  
+				break;
 	        case "blessed assault":
 				this.name = "Blessed Assault";
 				this.mana = 3;
@@ -197,20 +215,23 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;            
+				break;
 	        case "snatch":
 				this.name = "Snatch";
 				this.mana = 3;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;             
+				this.maxCopies = 2;            
+				break;
 	        case "sacrifice":
 				this.name = "Sacrifice";
 				this.mana = 3;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;             
+				this.maxCopies = 2;          
+				break;
 	        case "barron's ritual":
 				this.name = "Barron's Ritual";
 				this.mana = 3;
@@ -218,41 +239,47 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;    
+				break;
 	        case "skitter bug":
 				this.name = "Skitter Bug";
 				this.mana = 3;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;             
+				this.maxCopies = 2;    
+				break;
 	        case "knowledge":
 				this.name = "Knowledge";
 				this.mana = 3;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;             
+				this.maxCopies = 2;         
+				break;
 	        case "fate":
 				this.name = "Fate";
 				this.mana = 3;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;             
+				this.maxCopies = 2;         
+				break;
 	        case "flourish":
 				this.name = "Flourish";
 				this.mana = 3;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;             
+				this.maxCopies = 2;         
+				break;
 	        case "counter spell":
 				this.name = "Counter Spell";
 				this.mana = 4;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;             
+				this.maxCopies = 2;          
+				break;
 	        case "flow":
 				this.name = "Flow";
 				this.mana = 5;
@@ -260,6 +287,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;    
+				break;
 	        case "resurrect":
 				this.name = "Recurrect";
 				this.mana = 5;
@@ -267,13 +295,15 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;            
+				break;
 	        case "masterful counter":
 				this.name = "Masterful Counter";
 				this.mana = 5;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;               
+				this.maxCopies = 2;             
+				break;
 	        case "time vance":
 				this.name = "Time Vance";
 				this.mana = 5;
@@ -281,27 +311,31 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;
+				break;
 	        case "reduce":
 				this.name = "Reduce";
 				this.mana = 5;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;               
+				this.maxCopies = 2;            
+				break;
 	        case "utopia":
 				this.name = "Utopia";
 				this.mana = 5;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;               
+				this.maxCopies = 2;            
+				break;
 	        case "arcane blast":
 				this.name = "Arcane Blast";
 				this.mana = 5;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;               
+				this.maxCopies = 2;           
+				break;
 	        case "reduce":
 				this.name = "Reduce";
 				this.mana = 5;
@@ -309,20 +343,23 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 0;
 				this.maxCopies = 2;   
+				break;
 	        case "sky guard":
 				this.name = "Sky Guard";
 				this.mana = 6;
 				this.isCaster = false;
 				this.attack = 0;
 				this.health = 0;
-				this.maxCopies = 2;            
+				this.maxCopies = 2;          
+				break;
 	        case "eadwin the pyromancer":
 				this.name = "Eadwin, The Pyromancer";
 				this.mana = 1;
 				this.isCaster = true;
 				this.attack = 1;
 				this.health = 1;
-				this.maxCopies = 1;              
+				this.maxCopies = 1;            
+				break;
 	        case "siegmire the old king":
 				this.name = "Siegmire, The Old King";
 				this.mana = 2;
@@ -330,6 +367,7 @@ public class CardDatabase {
 				this.attack = 0;
 				this.health = 1;
 				this.maxCopies = 1;
+				break;
 	        case "zeph the wicked":
 				this.name = "Zeph, The Wicked";
 				this.mana = 2;
@@ -337,6 +375,7 @@ public class CardDatabase {
 				this.attack = 1;
 				this.health = 2;
 				this.maxCopies = 1;            
+				break;
 	        case "vez'nan the watchful eye":
 				this.name = "Vez'nan, The Watchful Eye";
 				this.mana = 3;
@@ -344,6 +383,7 @@ public class CardDatabase {
 				this.attack = 2;
 				this.health = 3;
 				this.maxCopies = 1;            
+				break;
 	        case "egmela barron's mistress":
 				this.name = "Egmela, Barron's Mistress";
 				this.mana = 3;
@@ -351,6 +391,7 @@ public class CardDatabase {
 				this.attack = 3;
 				this.health = 3;
 				this.maxCopies = 1;            
+				break;
 	        case "the rotting father":
 				this.name = "The Rotting Father";
 				this.mana = 3;
@@ -358,6 +399,7 @@ public class CardDatabase {
 				this.attack = 3;
 				this.health = 4;
 				this.maxCopies = 1;            
+				break;
 	        case "arnauld the knight":
 				this.name = "Arnauld, The Knight";
 				this.mana = 3;
@@ -365,6 +407,7 @@ public class CardDatabase {
 				this.attack = 2;
 				this.health = 2;
 				this.maxCopies = 1;             
+				break;
 	        case "rimorn the trickster":
 				this.name = "Rimorn, The Trickster";
 				this.mana = 4;
@@ -372,6 +415,7 @@ public class CardDatabase {
 				this.attack = 2;
 				this.health = 4;
 				this.maxCopies = 1;    
+				break;
 	        case "cidor nature's giant":
 				this.name = "Cidor, Nature's Giant";
 				this.mana = 5;
@@ -379,6 +423,7 @@ public class CardDatabase {
 				this.attack = 6;
 				this.health = 4;
 				this.maxCopies = 1;             
+				break;
 	        case "grook the goblin king":
 				this.name = "Grook, The Goblin King";
 				this.mana = 5;
@@ -386,6 +431,7 @@ public class CardDatabase {
 				this.attack = 1;
 				this.health = 5;
 				this.maxCopies = 1;
+				break;
 				// TODO have fun :)
 		}
 
