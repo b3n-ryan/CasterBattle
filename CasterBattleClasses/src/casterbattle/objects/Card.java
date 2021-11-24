@@ -13,6 +13,13 @@ public class Card extends CardDatabase {
 		super(cardName);
 
 	}
+    
+    /**
+     * public constructor for a blank card.
+     */
+    public Card() {
+    	super();
+    }
 
 	/*
      * Private members --------------------------------------------------------
@@ -21,6 +28,15 @@ public class Card extends CardDatabase {
     /*
      * Secondary methods ---------------------------------------------------------
      */
+    
+    public void makeBlankCard() {
+    	this.setName("blank");
+    	this.setMana(0);
+    	this.setHealth(0);
+    	this.setAttack(0);
+    	this.setIsCaster(false);
+    	this.setMaxCopies(0);
+    }
     
     @Override
     public boolean equals(Object c) {

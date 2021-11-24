@@ -34,11 +34,27 @@ public class CardDatabase {
 	 */
 	private int maxCopies;
 	
+	/*
+	 * Constructor for blank card.
+	 */
+	private void createNewRep() {
+    	this.setName("blank");
+    	this.setMana(0);
+    	this.setHealth(0);
+    	this.setAttack(0);
+    	this.setIsCaster(false);
+    	this.setMaxCopies(0);
+	}
+	
     /**
      * Creator of initial representation.
      */
     private void createNewRep(String cardName) {
         accessCard(cardName);
+    }
+    
+    public CardDatabase() {
+    	createNewRep();
     }
 	
     /**

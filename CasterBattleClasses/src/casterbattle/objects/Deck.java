@@ -45,6 +45,15 @@ public final class Deck {
      */
     
     /**
+     * Replaces this with newDeck and sets newDeck to a new Deck.
+     */
+    public void transferFrom(Deck newDeck) {
+        Deck localSource = (Deck) newDeck;
+        this.rep = localSource.rep;
+        localSource.createNewRep();
+    }
+    
+    /**
      * Adds Card {@code cardName} to the top of the deck.
      */
     public void addCard(Card cardName) {
