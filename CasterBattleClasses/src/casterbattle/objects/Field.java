@@ -25,7 +25,7 @@ public class Field {
 		this.player2Attacking = new Card();
 		this.deck = new Deck();
 		this.hand = new Deck();
-		this.deck = new Deck();
+		this.grave = new Deck();
 	}
 	
 	/**
@@ -64,7 +64,7 @@ public class Field {
 	 * @param name the card to move
 	 */
 	public void graveToHand(String name) {
-		this.hand.addCard(this.hand.removeCard(name));
+		this.hand.addCard(this.grave.removeCard(name));
 	}
 	
 	/**
@@ -159,7 +159,7 @@ public class Field {
 	 */
 	public void attackingToGrave() {
 		Card add = this.player1Attacking;
-		this.player1Caster = new Card();
+		this.player1Attacking = new Card();
 		this.grave.addCard(add);
 	}
 	
